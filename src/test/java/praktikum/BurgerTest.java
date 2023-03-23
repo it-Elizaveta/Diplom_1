@@ -70,7 +70,7 @@ public class BurgerTest {
         Assert.assertEquals(bun,burger.bun);
     }
 
-    @org.junit.Test
+    @Test
     public void addIngredientSuccessfully() {
         Burger burger= new Burger();
         int size= burger.ingredients.size();
@@ -78,7 +78,7 @@ public class BurgerTest {
         Assert.assertTrue(ingredient==burger.ingredients.get(burger.ingredients.size()-1)&&(burger.ingredients.size()==size+1));
     }
 
-    @org.junit.Test
+    @Test
     public void removeSingleIngredientSuccessfully() {
         Burger burger=new Burger();
         burger.addIngredient(ingredient);
@@ -86,7 +86,7 @@ public class BurgerTest {
         assertTrue(burger.ingredients.isEmpty());
     }
 
-    @org.junit.Test
+    @Test
     public void removeNotSingleIngredientSuccessfully() {
         Burger burger=new Burger();
         burger.addIngredient(ingredient);
@@ -104,7 +104,7 @@ public class BurgerTest {
         assertEquals(ingredientsExpected, burger.ingredients);
     }
 
-    @org.junit.Test
+    @Test
     public void moveIngredientSuccessfully() {
         Burger burger=new Burger();
         burger.addIngredient(ingredient);
@@ -123,7 +123,7 @@ public class BurgerTest {
         assertEquals(expectedIngredients, burger.ingredients);
     }
 
-    @org.junit.Test
+    @Test
     public void getPriceCorrect() {
         Burger burger=new Burger();
         burger.setBuns(bunMock);
@@ -134,7 +134,7 @@ public class BurgerTest {
         assertTrue(burger.getPrice()==expectedPrice);
     }
 
-    @org.junit.Test
+    @Test
     public void getReceiptShouldPrintCorrectInfo() {
         burgerSpy.setBuns(bunMock);
         burgerSpy.addIngredient(ingredientMock);
